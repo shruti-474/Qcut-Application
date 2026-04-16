@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- Toolbar / ActionBar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/pink"
+            app:title="Get Salons"
+            app:titleTextColor="@android:color/white" />
+
+        <!-- RecyclerView for favorite items -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            />
+
+        <!-- TextView to show when no data exists -->
+        <TextView
+            android:id="@+id/textViewNoFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Salon"
+            android:textSize="21sp"
+            android:textColor="#ED2469"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

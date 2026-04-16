@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- Toolbar / ActionBar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/pink"
+            app:title="All User Are Here"
+            app:titleTextColor="@android:color/white" />
+
+        <SearchView
+            android:id="@+id/serchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/searchback"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search by name, email or mobile"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            />
+
+
+        <!-- RecyclerView for favorite items -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <!-- TextView to show when no data exists -->
+        <TextView
+            android:id="@+id/textViewNoFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="No User"
+            android:textColor="#ED2469"
+            android:textSize="21sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
