@@ -1,0 +1,35 @@
+<?php
+require_once("databaseconnect.php");
+    $shopName      = $_POST['shopName'] ?? '';
+    $shopAddress   = $_POST['shopAddress'] ?? '';
+    $shopEmail     = $_POST['shopEmail'] ?? '';
+    $finalName     = $_POST['finalUserName'] ?? '';
+    $finalEmail    = $_POST['finalEmail'] ?? '';
+    $finalDate     = $_POST['finalDate'] ?? '';
+    $finalTime     = $_POST['finalTime'] ?? '';
+    $finalService  = $_POST['services'] ?? '';
+    $totalAmount   = $_POST['totalAmount'] ?? '';
+    $paymentMode   = $_POST['paymentMode'] ?? 'Cash';
+    $paymentStatus = $_POST['paymentStatus'] ?? 'Pending';
+    $sets   = $_POST['sets'] ?? '';
+    $statu   = $_POST['statu'] ?? '';
+
+
+
+     $query = "INSERT INTO appoinment 
+                  (shopname, shopaddress, shopemail, finalname, finalemail, finaldate, finaltime, finalservice, totalamount, paymentMode, paymentStatus, setno, statu) 
+                  VALUES 
+                  ('$shopName', '$shopAddress', '$shopEmail', '$finalName', '$finalEmail', '$finalDate', '$finalTime', '$finalService', '$totalAmount', '$paymentMode', '$paymentStatus', '$sets', '$statu')";
+
+                  $result = mysqli_query($connection,$query);
+
+if ($result > 0) {
+	$respond['success']=1;
+}
+else{
+	$respond['success']=0;
+}
+echo json_encode($respond);
+?>
+
+
