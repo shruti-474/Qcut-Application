@@ -1,0 +1,39 @@
+package com.mountreachsolution.qcut.common;
+
+public class url {
+    public static String address="http://10.208.165.3/QCut/";
+    public static String imageaddress="http://10.208.165.3/QCut/image/";
+    public static String GetSplashActvity=address+"getSplashScreen.php";
+    public static String RegisterUser=address+"userregister.php";
+    public static String LoginUser=address+"loginuser.php";
+    public static String updatePassword=address+"updatePassword.php";
+    public static String UplodeImage=address+"UplodeImage.php";
+    public static String GetprofilData=address+"getProfilData.php";
+    public static String updateUserdata=address+"updateUserdata.php";
+    public static String getSlider=address+"getSlider.php";
+    public static String getCategory=address+"getCategory.php";
+    public static String getShop=address+"getShop.php";
+    public static String getCategoryShop=address+"getCategoryshop.php";
+    public static String getShpdataById=address+"getShopbyId.php";
+    public static String lodbill=address+"LOADBILL.php";
+    public static String addToFav=address+"addToFav.php";
+    public static String getFav=address+"getFav.php";
+    public static String getAppoinment=address+"getAppoinment.php";
+    public static String delAppoinment=address+"delAppoinment.php";
+    public static String getAppoinmentShop=address+"getAppoinmentShop.php";
+    public static String addToHistory=address+"addHistrory.php";
+    public static String getshopHistory=address+"getshopHistory.php";
+    public static String getUserHistory=address+"getUserHistory.php";
+    public static String RegisterShop=address+"RegisterShop.php";
+    public static String shopimage=address+"shopimage.php";
+    public static String updateservice=address+"updateservice.php";
+    public static String checkstore=address+"checkstore.php";
+    public static String updateShop=address+"updateShop.php";
+    public static String getbooking=address+"getbooking.php";
+    public static String updateBooking=address+"updateBooking.php";
+    public static String loadBokking=address+"loadBokking.php";
+    public static String getBokking=address+"getBokking.php";
+    public static String delBooking=address+"delBooking.php";
+    public static String updateAppoinment=address+"updateAppoinment.php";
+    public static String updatepay=address+"updatepay.php";
+}
